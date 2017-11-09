@@ -1,24 +1,40 @@
 # DSC3W4
-Directory for assignment of Week 4, Course 3 of Data Science Program 
+### Directory for assignment of Week 4, Course 3 of Data Science Program 
 
 ## Section 1 - The project directory has the following structure and contains the following files:
-/test                      |subdirectory containing data files for the test cases
-/test/Inertial Signals/	   |subdirectory containing raw sensor data for the test cases 
-/test/subject_test.txt 	   |identifier of subject performing experiment
-/test/X_test.txt 	   |processed data from raw data files present in the "/Inertial Signals" directory
-/train 	                   |subdirectory containing data files for the training cases
-/train/Inertial Signals/   |subdirectory containing raw sensor data files for the training cases 
-/train/subject_train.txt   |identifier of subject performing experiment
-/train/X_train.txt 	   |processed data from raw data files present in the "/Inertial Signals" directory
-/train 			   |subdirectory containing data files for the training cases
-/activity_labels.txt 	   |file containing word descriptions of numeric identifiers used in labeling exercising activities and present in column no. 2 of final output table 
-/features.txt 		   |column names of all features included in the columns of the X_train/X_test files in the test and train subdirectories
-/features_info.txt	   |original code book describing what the data in the files is and how it was obtained after processing all the raw data from the sensors
-/README.txt 		   |the original readme file provided with the data. This file contains information about the various files in the directory structure
-/output.txt                |contains the resultant data frame ("the output") in txt format with the header containing the column names 
-/assignment4.R             |script file that is supposed to be run in order to provide the output - further description appears below
-/featureNames.R		   |script file that contains a subroutine for the assignment4() function - further description appears below
-/getFunctionString.R       |script file that contains a subroutine for the assignment4() function - further description appears below
+/test *subdirectory containing data files for the test cases*
+
+/test/Inertial Signals/ *subdirectory containing raw sensor data for the test cases*
+
+/test/subject_test.txt *identifier of subject performing experiment*
+
+/test/X_test.txt *processed data from raw data files present in the "/Inertial Signals" directory*
+
+/train *subdirectory containing data files for the training cases*
+
+/train/Inertial Signals/ *subdirectory containing raw sensor data files for the training cases* 
+
+/train/subject_train.txt *identifier of subject performing experiment*
+
+/train/X_train.txt *processed data from raw data files present in the "/Inertial Signals" directory*
+
+/train *subdirectory containing data files for the training cases*
+
+/activity_labels.txt *file containing word descriptions of numeric identifiers used in labeling exercising activities and present in column no. 2 of final output table*
+
+/features.txt *column names of all features included in the columns of the X_train/X_test files in the test and train subdirectories*
+
+/features_info.txt *original code book describing what the data in the files is and how it was obtained after processing all the raw data from the sensors*
+
+/README.txt *the original readme file provided with the data. This file contains information about the various files in the directory structure*
+
+/output.txt *contains the resultant data frame ("the output") in txt format with the header containing the column names*
+
+/assignment4.R *script file that is supposed to be run in order to provide the output - further description appears below*
+
+/featureNames.R *script file that contains a subroutine for the assignment4() function - further description appears below*
+
+/getFunctionString.R *script file that contains a subroutine for the assignment4() function - further description appears below*
 
 ## Section 2 Description of the script files
 ### Assignment4.R
