@@ -37,9 +37,11 @@ __/featureNames.R__ *- script file that contains a subroutine for the assignment
 __/getFunctionString.R__ *- script file that contains a subroutine for the assignment4() function - further description appears below*
 
 ## Section 2 Description of the script files
-### assignment4.R
-This file contains a function by the name of assignment4(). The file should be included in the R enviroment by calling the source("assignment4.R") function call. 
-The assignment4 function contains the main body of the code. 
+### run_analysis.R
+
+This file contains a function by the name of "run_analysis()". The file should be included in the R enviroment by calling the source("run_analysis.R") function call. 
+The run_analysis function is the main body of the code. 
+
 This function: 
 Opens the following input files: features.txt, /train/subject_train.txt, /train/Y_train.txt, /train/X_train.txt, /test/subject_test.txt, /test/Y_test.txt, /test/X_test.txt. 
 If successful in opening these files, it reads the data into 7 data frames. Three frames each from the training set and the test set are read in from the files and the three are 
@@ -49,7 +51,7 @@ The two subset data frames viz train frame and test frame are merged to make one
 This resulting frame is further sorted and rearranged by the subject and then by activity identifiers. 
 The rearranged data frame is further grouped by the subjects and activities. Averages of all grouped data (grouped by subject and activity) in each column is calculated by the summarise() 
 function and stored in an output frame of 180 rows (30 subjects x 6 activities each) for a total of 68 columns. 
-The output data frame is 180 rows x 68 columns and is presented as a text file with the name of "output.txt"
+The output data frame is 180 rows x 68 columns and is displayed on the screen as well as written into the current directory as a text file with the name of "output.txt"
 
 ### featureNames.R
 This file contains a subroutine that takes in the complete list of feature names (i.e. column names) that we wish to include in the coutput table/text file and returns a list that is 

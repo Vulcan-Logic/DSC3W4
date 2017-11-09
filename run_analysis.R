@@ -1,4 +1,5 @@
 #written by Vineet W. Singh - 08-11-2017
+#run_analysis.R
 #submission for assignment 4 of the cleanind data module of the data science course of coursera
 
 #script input
@@ -19,7 +20,7 @@
   # tries to write a txt file containing the processed data ie output table in the form of a text file containing a header with the column names 
   # and 180 rows of 68 values each. 
 
-assignment4<-function(){
+run_analysis<-function(){
   
   if(is.element("dplyr", installed.packages()[,1])){ #check if dplyr is installed
     require("dplyr") #load dplyr if it is installed
@@ -111,9 +112,6 @@ assignment4<-function(){
   finalFrame$Activity<-as.character(finalFrame$Activity)        #make the activity labels into strings so that they can be written by write.table
   
   message("writing output.txt")
-  write.table(finalFrame,"output.txt",row.names=F)              #write the result into the output.txt file. 
+  write.table(finalFrame,"output.txt",row.names=F)              #write the result into the output.txt file.
+  finalFrame
 }
-
-
-
-
