@@ -37,8 +37,8 @@ __/featureNames.R__ *- script file that contains a subroutine for the assignment
 __/getFunctionString.R__ *- script file that contains a subroutine for the assignment4() function - further description appears below*
 
 ## Section 2 Description of the script files
-### Assignment4.R
-This file contains a function by the name of assignment4(). The file should be included in the R enviroment by calling the source("Assignment4.R") function call. 
+### assignment4.R
+This file contains a function by the name of assignment4(). The file should be included in the R enviroment by calling the source("assignment4.R") function call. 
 The assignment4 function contains the main body of the code. 
 This function: 
 Opens the following input files: features.txt, /train/subject_train.txt, /train/Y_train.txt, /train/X_train.txt, /test/subject_test.txt, /test/Y_test.txt, /test/X_test.txt. 
