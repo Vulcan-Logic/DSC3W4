@@ -1,16 +1,20 @@
 featureNames<-function(featureNameList){
   #dynamically build a string that will take in all the column names and then execute the string. 
+  #input is a list of the original feature names. 
+  #ouput is a list of more detailed feature names.
+  
   vFeatureFullName<-NULL
-  for (vFeatureNameNo in seq_along(featureNameList)){ #process all feature names in the features info file
+  for (vFeatureNameNo in seq_along(featureNameList)){ #process all feature names in the input list of feature names
     
-    vFeatureName<-featureNameList[vFeatureNameNo] #get the character string of feature Name
+    vFeatureName<-featureNameList[vFeatureNameNo]     #get the character string of feature Name
     
-    vSplitFeatureName<-strsplit(vFeatureName,"-") #divide feature name into it's components
+    vSplitFeatureName<-strsplit(vFeatureName,"-")     #split feature name into it's components
     
     
-    if (length(vSplitFeatureName[[1]]==3)){ #check on the length of components
-      #1
-      if (tolower(vSplitFeatureName[[1]][1])=="tbodyacc"){ 
+    if (length(vSplitFeatureName[[1]]==3)){           #check on the length of components
+      #check each original column(feature) name and generate a more detailed feature(column) name
+      #1    
+      if (tolower(vSplitFeatureName[[1]][1])=="tbodyacc"){  
         vFeatureMain<-"Avg-Body-Accl-"
         if(tolower(vSplitFeatureName[[1]][2])=="mean()"){ vFeatureFunc<-"Mean-"}
         else if (tolower(vSplitFeatureName[[1]][2])=="std()"){ vFeatureFunc<-"Std-Dev-"}
@@ -159,5 +163,5 @@ featureNames<-function(featureNameList){
       
     }
   }
-  return(vFeatureFullName)
+  return(vFeatureFullName) #return the list containing the more detailed names
 }
