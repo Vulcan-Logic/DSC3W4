@@ -24,11 +24,17 @@ FFT-Free Fourier Transforms as applied to the measurements to derive frequency r
 Mean: This signifies that the original column contained the mean of the calculated parameters. 
 Std-Dev: This signifies that the original column contained the standard deviation of the calculated parameters.
 
+
 **Subject Identifiers**
+
 1. "Subject" 
+
 **Activity Identifiers**
+
 2. "Activity" 
+
 **The following labels are self explanatory when used in conjunction with the abbreviations listed above** 
+
 3. "Avg-Body-Accl-Mean-X-Axis" 
 4. "Avg-Body-Accl-Mean-Y-Axis" 
 5. "Avg-Body-Accl-Mean-Z-Axis" 
@@ -102,6 +108,7 @@ Std-Dev: This signifies that the original column contained the standard deviatio
 Human Activity Recognition Using Smartphones Dataset
 Version 1.0
 ---
+
 Jorge L. Reyes-Ortiz, Davide Anguita, Alessandro Ghio, Luca Oneto.
 Smartlab - Non Linear Complex Systems Laboratory
 DITEN - Università degli Studi di Genova.
@@ -109,6 +116,7 @@ Via Opera Pia 11A, I-16145, Genoa, Italy.
 activityrecognition@smartlab.ws
 www.smartlab.ws
 ---
+
 Feature Selection 
 ---
 
