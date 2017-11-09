@@ -12,7 +12,7 @@ columns of the data files (X_train.txt/X_test.txt). Out of these 561 columns, co
 Each extracted column was further grouped by each set of activity (per subject) and the mean of the grouped data was calculated. These average values are presented as the 
 columns of "output.txt" 
 
-##Columns in "output.txt" 
+## Columns in "output.txt" 
 
 ### Key to Abreviations used in labels for columns 3 to 68: 
 Avg: Average
@@ -24,9 +24,9 @@ FFT-Free Fourier Transforms as applied to the measurements to derive frequency r
 Mean: This signifies that the original column contained the mean of the calculated parameters. 
 Std-Dev: This signifies that the original column contained the standard deviation of the calculated parameters.
 
-1. "Subject" - Subject Identifier
-2. "Activity" - Activity Identifier 
-3. "Avg-Body-Accl-Mean-X-Axis" - The following labels are self explanatory when used in conjunction with the abbreviations listed above
+1. "Subject" #### Subject Identifier
+2. "Activity" #### Activity Identifier 
+3. "Avg-Body-Accl-Mean-X-Axis" #### The following labels are self explanatory when used in conjunction with the abbreviations listed above
 4. "Avg-Body-Accl-Mean-Y-Axis" 
 5. "Avg-Body-Accl-Mean-Z-Axis" 
 6. "Avg-Body-Accl-Std-Dev-X-Axis" 
