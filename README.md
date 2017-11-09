@@ -40,9 +40,10 @@ __CodeBook.md__ *- Code Book describing the structure of the output data/table/f
 
 __README.md__ *- This file*
 
-##Executing run_analysis.R
+## Executing run_analysis.R
 
-run_analysis.R should be placed in the main directory of the data set. The structure of the directory where it is placed should be similar to the structure that appear above. 
+run_analysis.R should be placed in the main directory of the data set. 
+The structure of the directory where it is placed **__MUST__** be similar to the structure that appears above. 
 The function will fail if it is not placed, sourced and run from the main directory. 
 
 ## The Code Book can be found in the file __CodeBook.md__
