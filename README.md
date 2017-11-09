@@ -36,6 +36,9 @@ __/featureNames.R__ *- script file that contains a subroutine for the assignment
 
 __/getFunctionString.R__ *- script file that contains a subroutine for the assignment4() function - further description appears below*
 
+
+## The Code Book can be found in the file CodeBook.md
+
 ## Section 2 Description of the script files
 ### run_analysis.R
 
