@@ -36,8 +36,16 @@ __/featureNames.R__ *- script file that contains a subroutine for the assignment
 
 __/getFunctionString.R__ *- script file that contains a subroutine for the assignment4() function - further description appears below*
 
+__CodeBook.md__ *- Code Book describing the structure of the output data/table/file*
 
-## The Code Book can be found in the file CodeBook.md
+__README.md__ *- This file*
+
+##Executing run_analysis.R
+
+run_analysis.R should be placed in the main directory of the data set. The structure of the directory where it is placed should be similar to the structure that appear above. 
+The function will fail if it is not placed, sourced and run from the main directory. 
+
+## The Code Book can be found in the file __CodeBook.md__
 
 ## Section 2 Description of the script files
 ### run_analysis.R
