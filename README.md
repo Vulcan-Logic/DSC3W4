@@ -1,7 +1,23 @@
-# DSC3W4
-### Directory for assignment of Week 4, Course 3 of Data Science Program 
+# Submission for Coursera Data Science Program - Cleaning & Tidy Data Course Project.   
 
-## Section 1 - The project directory has the following structure and contains the following files:
+## Motivation
+
+The purpose of the project is to demonstrate the ability to collect, work with, and clean a data set. 
+
+The goal is to prepare tidy data that can be used for later analysis and to provide:
+ 
+1) a tidy data set 
+2) a link to a Github repository with the script/s that perform the analysis and 
+3) a code book that describes the variables, the data, and any transformations or work done on the data.
+
+### Source of the data
+
+One of the most exciting areas in all of data science right now is wearable computing - see for example this article . Companies like Fitbit, Nike, and Jawbone Up are racing to develop the most advanced algorithms to attract new users. 
+
+More information and the source of the data can be obtained by reading the original README.txt file included with the data set. 
+
+
+## Structure - The project directory has the following structure and contains the following files:
 __/test__ *- subdirectory containing data files for the test cases*
 
 __/test/Inertial Signals/__ *- subdirectory containing raw sensor data for the test cases*
@@ -32,9 +48,9 @@ __/output.txt__ *- contains the resultant data frame ("the output") in txt forma
 
 __/run_analysis.R__ *- script file that is supposed to be run in order to provide the output - further description appears below*
 
-__/featureNames.R__ *- script file that contains a subroutine for the assignment4() function - further description appears below*
+__/run_analysis1.R__ *- script file that contains the main body of the code in run_analysis1.R* 
 
-__/getFunctionString.R__ *- script file that contains a subroutine for the assignment4() function - further description appears below*
+__/featureNames.R__ *- script file that contains a subroutine for the run_analysis1 function - further description appears below*
 
 __CodeBook.md__ *- Code Book describing the structure of the output data/table/file*
 
@@ -42,11 +58,11 @@ __README.md__ *- This file*
 
 ## Executing run_analysis.R
 
-run_analysis.R should be placed in the main directory of the data set. 
+run_analysis.R should be placed in the main directory of the data set and called by entering source('run_analysis.R') in the R environment. 
 The structure of the directory where it is placed **__MUST__** be similar to the structure that appears above. 
-The function will fail if it is not placed, sourced and run from the main directory. 
+The function will fail if it is not placed, sourced and run from the main directory. The script file will attempt to download the data if it is not found to be present. 
 
-## The Code Book can be found in the file __CodeBook.md__
+#### The Code Book can be found in the file __CodeBook.md__
 
 ## Section 2 Description of the script files
 ### run_analysis.R
