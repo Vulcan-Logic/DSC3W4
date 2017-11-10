@@ -1,26 +1,6 @@
-#written by Vineet W. Singh - 08-11-2017
-#run_analysis.R
-#submission for assignment 4 of the cleanind data module of the data science course of coursera
+  #main function called by the run_analysis script
 
-#script input
-  #this script tries to open the following input files: features.txt, /train/subject_train.txt, /train/Y_train.txt, /train/X_train.txt,
-  # /test/subject_test.txt, /test/Y_test.txt, /test/X_test.txt. 
-
-#script processing
-  # utlises three R functions to do the job of trying to open data files, if successful, it reads the data into 7 data frames. Three frames from the 
-  # training set and the test set are merged to make one frame each for the test set and training set. Subsets of the two sets are obtained and 
-  # these subsets contain just the required featues i.e calculated mean and SD of all the processed data values. There 66 columns or relevant features. 
-  # The two data frames viz train frame and test frame are merged to make one frame. This frame is further sorted out and rearranged by the subject 
-  # and activity. 
-  # The rearranged data frame is further grouped by the subjects and activity of the subjects. Averages of all grouped data (grouped by subject and activity)
-  # in each column is calculated and stored in an output frame of 180 rows (30 subjects x 6 activities) for a total of 68 columns. 
-  # output table is 180 rows x 68 columns. 
-
-#script output
-  # tries to write a txt file containing the processed data ie output table in the form of a text file containing a header with the column names 
-  # and 180 rows of 68 values each. 
-
-run_analysis1<-function(){
+  run_analysis1<-function(){
   
   source("featureNames.R")                        #try to source required function file 
 
@@ -86,10 +66,15 @@ run_analysis1<-function(){
   
   finalDataSorted<-arrange(finalDataUnsorted,Subject,Activity) #sort the merged data 
   
-  semifinalFrame <- group_by(finalDataSorted,Subject,Activity) %>%  #group row data by subject and subgroup by activity
+  finalFrame <- group_by(finalDataSorted,Subject,Activity) %>%  #group row data by subject and subgroup by activity
                 summarise_all(funs(mean))                            #calculate summary statistics (mean) on grouped data
   
-  finalFrame<-merge(semifinalFrame,activityLabels,by="Activity") #replace numeric activity indicators by their descriptive labels
+  finalFrame<-as.data.frame(finalFrame)                         #recast the resultant grouped data frame as a ordinary data frame 
+  
+  finalFrame$Activity<-lapply(finalFrame$Activity, function(x){switch(x,"WALKING","WALKING_UPSTAIRS","WALKING_DOWNSTAIRS","SITTING","STANDING","LAYING")})
+  #change activity labels from numbers to descriptive string values
+  
+  finalFrame$Activity<-as.character(finalFrame$Activity)
   
   names(finalFrame)<-c("Subject","Activity",featureNames(featureNameList)) #prepare the column names by a call to featureNames function to get a 
                                                                            #detailed feature names
@@ -97,3 +82,4 @@ run_analysis1<-function(){
   write.table(finalFrame,"output.txt",row.names=F)              #write the result into the output.txt file.
   return(finalFrame)                                                    #return final frame
 }
+

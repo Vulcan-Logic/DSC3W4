@@ -10,14 +10,29 @@ The goal is to prepare tidy data that can be used for later analysis and to prov
 2) a link to a Github repository with the script/s that perform the analysis and 
 3) a code book that describes the variables, the data, and any transformations or work done on the data.
 
-### Source of the data
+## Files included in this repository
 
-One of the most exciting areas in all of data science right now is wearable computing - see for example this article . Companies like Fitbit, Nike, and Jawbone Up are racing to develop the most advanced algorithms to attract new users. 
+### R script files
+1) run_analysis.R
+2) run_analysis1.R
+3) featureNames.R
+### Markdown files
+4) README.md
+5) CodeBook.md
+### Obtained sample output
+6) output.txt
 
-More information and the source of the data can be obtained by reading the original README.txt file included with the data set. 
+## Executing run_analysis.R
+**__The three script files run_analysis.R, run_analysis1.R and featureNames.R must be downloaded together and placed in the run directory__**
 
+run_analysis.R can be executed by calling source('run_analysis.R') in the R environment. 
 
-## Structure - The project directory has the following structure and contains the following files:
+The script file will attempt to download the data if it isn't present. 
+
+In case data download is not desired the 3 script files should be placed in a directory whose structure **__MUST__** be similar to the structure that appears below.
+
+### Expected project directory structure. The project directory should contain the following directories and files:
+
 __/test__ *- subdirectory containing data files for the test cases*
 
 __/test/Inertial Signals/__ *- subdirectory containing raw sensor data for the test cases*
@@ -56,21 +71,20 @@ __CodeBook.md__ *- Code Book describing the structure of the output data/table/f
 
 __README.md__ *- This file*
 
-## Executing run_analysis.R
-
-run_analysis.R should be placed in the main directory of the data set and called by entering source('run_analysis.R') in the R environment. 
-The structure of the directory where it is placed **__MUST__** be similar to the structure that appears above. 
-The function will fail if it is not placed, sourced and run from the main directory. The script file will attempt to download the data if it is not found to be present. 
-
 #### The Code Book can be found in the file __CodeBook.md__
 
+### Source of the data
+
+One of the most exciting areas in all of data science right now is wearable computing - see for example this article . Companies like Fitbit, Nike, and Jawbone Up are racing to develop the most advanced algorithms to attract new users. 
+
+__More information and the source of the data can be obtained by reading the original README.txt file included with the data set.__
+
 ## Section 2 Description of the script files
-### run_analysis.R
+### run_analysis.R and run_analysis1.R
 
-This file contains a function by the name of "run_analysis()". The file should be included in the R enviroment by calling the source("run_analysis.R") function call. 
-The run_analysis function is the main body of the code. 
+This main script executed is run_analysis.R and calls the function run_analysis1() which contains the main body of the code. 
 
-The function opens the following input files: features.txt, /train/subject_train.txt, /train/Y_train.txt, /train/X_train.txt, /test/subject_test.txt, /test/Y_test.txt, /test/X_test.txt. 
+run_analysis1() opens the following input files: features.txt, /train/subject_train.txt, /train/Y_train.txt, /train/X_train.txt, /test/subject_test.txt, /test/Y_test.txt, /test/X_test.txt. 
 and reads the data into 7 data frames. 
 
 Three frames each from the training set and the test set are read in from the files and the three are merged to make one frame each for the test set and training set. 
